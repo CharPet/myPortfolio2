@@ -724,9 +724,14 @@ footer a:hover {
         z-index: 0;
     }
 
+    .hero-text {
+        margin: 0 auto;
+    }
+
+
     .hero-text h1{
         font-size: 2rem;
-        margin: 0;
+        margin: 0 auto;
         padding: 0;
         text-align: center;
         margin-bottom: 1rem;
@@ -768,33 +773,49 @@ footer a:hover {
         position: absolute;
         top: 0; 
         right: 0; 
-        width: 40%;
+        width: 50%;
         border: 2px solid var(--neutral-white);
         border-radius: 15px;
         
     }
 
-    .nav-menu ul li {
-        text-align: center; margin: 0.8rem 0.8rem; 
-        font-size: 0.1rem;
+    .nav-menu {
+        border: 2px solid black;
     }
+
+    .nav-menu ul li {
+        text-align: center; 
+        margin: 0.4rem; 
+        font-size: 0.1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    }
+
+    /* .nav-menu ul li:first-of-type {
+        text-align: center;
+    } */
   
     .nav-menu.active ul{
         display: flex;
-        
+       
     }
 
     #nav-list {
         margin: 4rem auto;
         padding: 0;
         position: fixed;
-        
+        z-index: 100;
         
     }
 
     nav a {
         font-size: 1rem;
+        text-align: center;
     }
+
+
 
     .switch-menubar-container {
         display: flex;
