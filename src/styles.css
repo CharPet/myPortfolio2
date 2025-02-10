@@ -637,7 +637,11 @@ footer a:hover {
     cursor: pointer;
     font-weight: 600;
     border: 5px groove var(--purple);
-    border-radius: 12px;  
+    border-radius: 12px;
+}
+
+#scrollToHeroButton > span {
+    font-size: 50px;
 }
 
 #scrollToHeroButton:hover {
