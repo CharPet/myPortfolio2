@@ -28,7 +28,7 @@ html {
 
 body {
     font-family: 'Ysabeau', sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     margin: 0;
     line-height: 1.4;
    
@@ -405,9 +405,9 @@ p {
 }
 
 .information {
-    max-width: 60%;
+    max-width: 100%;
     background-color: var(--white-beige);
-    box-shadow: 80px 100px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 50px 40px 30px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     padding: 3rem;
     padding-bottom: 6rem;
@@ -785,6 +785,9 @@ footer a:hover {
 
     .nav-menu {
         border: 2px solid black;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
     }
 
     .nav-menu ul li {
@@ -800,6 +803,10 @@ footer a:hover {
     /* .nav-menu ul li:first-of-type {
         text-align: center;
     } */
+
+    .nav-menu.active {
+        max-height: 500px; /* Αυξάνει σταδιακά */
+    }
   
     .nav-menu.active ul{
         display: flex;
@@ -1129,3 +1136,35 @@ footer a:hover {
         padding: 0;
     }
 } */
+
+.bio {
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+}
+
+.font-controls {
+    margin: 10px;
+}
+
+button {
+    padding: 5px 12px;
+    font-size: 18px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: var(--neutral-black);
+    color: var(--neutral-white);
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.h2-font-controls-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+

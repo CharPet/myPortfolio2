@@ -1,8 +1,12 @@
+/*Dark Mode*/
+
 const switchElement = document.querySelector('.switch');
 
 switchElement.addEventListener('click', () => {
   document.body.classList.toggle('dark')
 });
+
+/*Ημερομηνία και Ώρα*/
 
 function updateDateTime() {
     const dateTimeElement = document.querySelector('.date-time');
@@ -13,10 +17,10 @@ function updateDateTime() {
     dateTimeElement.textContent = formattedDateTime;
 }
 
-
 updateDateTime();
 setInterval(updateDateTime, 1000);
 
+/*Κουμπί Κατέβασμας Βιογραφικού*/
 
 document.addEventListener('DOMContentLoaded', function() {
     const downloadCvLink = document.getElementById('download-cv');
@@ -31,11 +35,13 @@ function downloadPdf() {
     window.open('src/Βιογραφικό Σημείωμα.pdf', '_blank');
 }
 
+
+
 const header = document.querySelector('header');
 const hero = document.querySelector('.hero');
 const headerHeight = header.clientHeight;
 
-
+/* Nav Menu */
 
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.getElementById("menu-toggle");
@@ -54,6 +60,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+/* Anchor Button */
+
 const scrollToHeroButton = document.getElementById('scrollToHeroButton');
 const heroSection = document.querySelector('.hero');
 
@@ -61,6 +69,17 @@ scrollToHeroButton.addEventListener('click', () => {
     heroSection.scrollIntoView({ behavior: 'smooth' });
 });
 
+/*Font Size*/
+
+function changeFontSize(value) {
+    let elements = document.getElementsByClassName("font-text");
+    
+    for (let i = 0; i < elements.length; i++) {
+        let currentSize = window.getComputedStyle(elements[i]).fontSize;
+        let newSize = parseFloat(currentSize) + value;
+        elements[i].style.fontSize = newSize + "px";
+    }
+}
 
 
 

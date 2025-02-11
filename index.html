@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ysabeau:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.10.1/devicon.min.css">
- 
   </head>
   <body>
       <section class="hero">
@@ -39,29 +38,36 @@
                   <li><a href="#contact-me">Επικοινωνία</a></li>
                   <li>
                     <div class="tooltip">
-                      <a href="#" id="download-cv">Βιογραφικό Σημείωμα</a>
+                        <a href="src/Βιογραφικό Σημείωμα.pdf" class="cv-download"><i class="fas fa-download"></i>Βιογραφικό Σημείωμα</a>
                       <span class="tooltiptext">Download CV</span>
                     </div>
                   </li>
               </ul>
           </nav>
           <div class="hero-area">
-            <div class="headshot-mobile-container">
+            <!-- <div class="headshot-mobile-container">
                 <img class="headshot-mobile" src="src/images/pc2.webp" alt="Petros Charalampidis">
-            </div>
+            </div> -->
             <div class="hero-text">
                 <h1>Χαραλαμπίδης Πέτρος</h1>
                 <p> Τεχνικός Εφαρμογών Πληροφορικής<br>Πολυμέσα / Web Design – Development / Videogames</p>
                 <button class="button"><a href="#about-me">Σχετικά με Εμένα</a></button>
             </div>
+            </div>
       </section>
       <button id="scrollToHeroButton"><span>&#8682;</span></button>
       <section class="sub-section" id="about-me">
           <div class="information">
+            <div class="h2-font-controls-container">
               <h2>Σχετικά με Εμένα</h2>
-              <p><strong>Χαίρετε και καλωσορίσατε στον ιστότοπο μου!</strong></p>
+              <div class="font-controls">
+                <button onclick="changeFontSize(-0.25)">A-</button>
+                <button onclick="changeFontSize(0.25)">A+</button>
+              </div>
+            </div>
+              <p class="font-text"><strong>Χαίρετε και καλωσορίσατε στον ιστότοπο μου!</strong></p>
               <br>
-              <p>
+              <p class="font-text">
                 Ονομάζομαι Χαραλαμπίδης Πέτρος και έχω ολοκληρώσει το πρόγραμμα σπουδών
                 «Τεχνικός Εφαρμογών Πληροφορικής (Πολυμέσα / Web Design – Development / Videogames)» στο ΙΕΚ Βολτέρος.
                 Αναζητώ μια θέση εργασίας ως Junior Developer, 
@@ -70,7 +76,7 @@
                 ανάπτυξης και παραγωγής ψηφιακών προϊόντων υπό την καθοδήγηση έμπειρων επαγγελματιών.
               </p>
               <br>
-              <p>
+              <p class="font-text">
                 Με ενδιαφέρει ιδιαίτερα η διερεύνηση των τεχνολογικών αναγκών της κοινωνίας,
                 η μετατροπή μιας ιδέας σε λειτουργικό λογισμικό και η ανάπτυξη προγραμματιστικής σκέψης.
                 Παράλληλα, με γοητεύει η αναζήτηση σχεδιαστικών προσεγγίσεων που μπορούν να κάνουν ένα λογισμικό διαχρονικά χρήσιμο και ουσιαστικό.
@@ -78,7 +84,7 @@
                 της Τυπογραφίας και της Γραφιστικής, καθώς και οι αλληλεπιδράσεις τους με την Τέχνη.
               </p> 
               <br>
-              <p>
+              <p class="font-text">
                 Στόχος μου είναι να ενταχθώ σε μια ομάδα εργασίας,
                 να κατανοήσω πώς οργανώνεται και υλοποιείται ένα project στον επαγγελματικό χώρο και
                 να παρακολουθήσω τη συνεργία των διαφορετικών ρόλων
@@ -86,14 +92,14 @@
                 καθώς και τη χρήση εργαλείων όπως τα λογισμικά ελέγχου εκδόσεων.
               </p>
               <br>
-              <p>
+              <p class="font-text">
                 Επιπλέον, με ενδιαφέρει η τεχνολογία και ειδικά η Τεχνητή Νοημοσύνη, όχι μόνο ως εργαλείο,
                 αλλά και ως ενεργό στοιχείο που επηρεάζει την ανθρώπινη κοινωνία. 
                 Εστιάζω στις επιπτώσεις που προκύπτουν όταν Πολιτισμός και Τεχνολογία βρίσκονται σε συνεχή αλληλεπίδραση,
                 διαμορφώνοντας νέες αντιλήψεις, συμπεριφορές και τρόπους ζωής.
               </p>
               <br>
-              <p>
+              <p class="font-text">
                 Μέσω της πρακτικής άσκησης, επιδιώκω να κάνω το πρώτο μου επαγγελματικό βήμα στον χώρο της Πληροφορικής,
                 να αποκτήσω πολύτιμες γνώσεις και να προσανατολιστώ στον κλάδο,
                 με απώτερο στόχο την εξειδίκευσή μου σε τομείς που με παθιάζουν.
@@ -120,6 +126,18 @@
             <h3>JavaScript</h3>
         </div>
         <div class="logo-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP-logo" />           
+            <h3>PHP</h3>
+        </div>
+        <div class="logo-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" alt="MySQL-logo" />
+            <h3>MySQL</h3>
+        </div>
+        <div class="logo-card">           
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" alt="WordPress-logo" />
+            <h3>WordPress</h3>
+        </div>
+        <div class="logo-card">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C-lang-logo" />
             <h3>C</h3>
         </div>
@@ -130,35 +148,7 @@
         <div class="logo-card">
             <img src="src/svg/java-4-logo-svgrepo-com.svg" alt="C++-lang-logo" />
             <h3>Java</h3>
-        </div>
-        <div class="logo-card">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP-logo" />           
-            <h3>PHP</h3>
-        </div>
-        <div class="logo-card">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" alt="MySQL-logo" />
-            <h3>MySQL</h3>
-        </div>
-        <div class="logo-card">
-            <img src="src/svg/xampp.svg" class="XAMPP" alt="XAMPP-logo" >
-            <h3>XAMPP</h3>
-        </div>
-        <div class="logo-card">           
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" alt="WordPress-logo" />
-            <h3>WordPress</h3>
         </div>    
-        <div class="logo-card">
-            <img src="src/images/onShape.png" alt="OnShape-logo">
-            <h3>OnShape</h3>
-        </div>
-        <div class="logo-card"> 
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/inkscape/inkscape-original-wordmark.svg" alt="Inkscape-logo"/>
-            <h3>Inkscape</h3>
-        </div>
-        <div class="logo-card">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma-logo" />
-            <h3>Figma</h3>
-            </div>
         <div class="logo-card">
             <svg viewBox="0 0 128 128">
                 <g fill-rule="evenodd">
@@ -168,8 +158,24 @@
             <h3>Unreal Engine 3</h3>
         </div>
         <div class="logo-card">
-            <img src="src/svg/Opengl-logo (1).svg" class="OpenShot" alt="OpenGL-Logo">
+            <img src="src/images/onShape.png" alt="OnShape-logo">
+            <h3>OnShape</h3>
+        </div>
+        <div class="logo-card">
+            <img src="src/svg/cdnlogo.com_opengl.svg" class="OpenShot" alt="OpenGL-Logo">
             <h3>OpenGL</h3>
+        </div>
+        <div class="logo-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original-wordmark.svg" alt="Blender-logo" />
+            <h3>Blender</h3>
+        </div>
+        <div class="logo-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma-logo" />
+            <h3>Figma</h3>
+        </div>
+        <div class="logo-card"> 
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/inkscape/inkscape-original-wordmark.svg" alt="Inkscape-logo"/>
+            <h3>Inkscape</h3>
         </div>
         <div class="logo-card">
             <img src="src/svg/Adobe_Premiere_Pro_CC_icon.svg" alt="Adobe Premiere-logo">   
@@ -178,10 +184,6 @@
         <div class="logo-card">
         <img src="src/svg/Adobe_Animate_CC_icon_(2020).svg" alt="Adobe Flash-logo">   
             <h3>Adobe Animate</h3>
-        </div>
-        <div class="logo-card">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original-wordmark.svg" alt="Blender-logo" />
-            <h3>Blender</h3>
         </div>
         <div class="logo-card">
             <img src="src/images/uniconverter.png" alt="Wondershare UniCoverter-logo" />
@@ -207,7 +209,7 @@
       </section>
       <section class="projects" id="projects">
           <h2 class="projects-title">Projects</h2>
-          <p class="projects-subtext">Προς το παρόν, συμμετέχω στα προγράμματα σπουδών του <a href="https://www.theodinproject.com" target="_blank">The Odin Project</a>, του <a href="https://www.freecodecamp.org/learn" target="_blank">freeCodeCamp</a> και του <a href="https://www.codecademy.com/learn" target="_blank">codecademy</a>.</p>
+          <p class="projects-subtext">Ακολουθούν project εξάσκησης από το <a href="https://www.theodinproject.com" target="_blank">The Odin Project</a>, το <a href="https://www.freecodecamp.org/learn" target="_blank">freeCodeCamp</a> και το <a href="https://www.codecademy.com/learn" target="_blank">codecademy</a>.</p>
           <div class="project-container">
             <div class="project-card">
                 <img class="project-image" src="src/images/charpet.github.io_Library-part1_.webp" alt="Calculator"/>
