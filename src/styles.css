@@ -556,6 +556,13 @@ p {
     transition: transform 0.3s ease; 
 }
 
+.img-corrections{
+    width: 100%; /* Παίρνει όλο το διαθέσιμο πλάτος */
+    height: 200px; /* Σταθερό ύψος */
+    object-fit: cover; /* Διατηρεί τις αναλογίες χωρίς παραμόρφωση */
+    display: block; /* Αποτρέπει κενά διαστήματα */
+}
+
 /* .project-image img:hover {
     transform: scale(1.1);
 } */
@@ -1200,4 +1207,5 @@ button:hover {
     justify-content: space-between;
     align-items: flex-start;
 }
+
 
