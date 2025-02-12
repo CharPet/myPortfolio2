@@ -20,7 +20,7 @@ function updateDateTime() {
 updateDateTime();
 setInterval(updateDateTime, 1000);
 
-/*Κουμπί Κατέβασμας Βιογραφικού*/
+/*Κουμπί Βιογραφικού*/
 
 document.addEventListener('DOMContentLoaded', function() {
     const downloadCvLink = document.getElementById('download-cv');
@@ -62,12 +62,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /* Anchor Button */
 
-const scrollToHeroButton = document.getElementById('scrollToHeroButton');
-const heroSection = document.querySelector('.hero');
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollToHeroButton = document.getElementById("scrollToHeroButton");
+    const heroSection = document.querySelector(".hero");
+    
+    window.addEventListener("scroll", function () {
+        const heroBottom = heroSection.offsetHeight;
+        if (window.scrollY > heroBottom) {
+            scrollToHeroButton.classList.add("visible");
+        } else {
+            scrollToHeroButton.classList.remove("visible"); 
+        }
+    });
 
-scrollToHeroButton.addEventListener('click', () => {
-    heroSection.scrollIntoView({ behavior: 'smooth' });
+    scrollToHeroButton.addEventListener("click", function () {
+        heroSection.scrollIntoView({ behavior: "smooth" });
+    });
 });
+
 
 /*Font Size*/
 
@@ -80,6 +92,8 @@ function changeFontSize(value) {
         elements[i].style.fontSize = newSize + "px";
     }
 }
+
+
 
 
 
