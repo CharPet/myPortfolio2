@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function downloadPdf() {
-    window.open('src/Βιογραφικό Σημείωμα.pdf', '_blank');
+    window.open('src/pdf/Βιογραφικό Σημείωμα + Περιγραφή της Πρακτικής Άσκησης.pdf', '_blank');
 }
 
 
